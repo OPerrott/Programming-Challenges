@@ -1,0 +1,15 @@
+from settings import Settings
+from ui import UI
+
+from lib import *
+
+class Main:
+    def __init__(self):
+        self.bootup()
+        
+    def bootup(self):
+        UI.draw_window(self)
+        
+        
+if __name__ == '__main__':
+    Main()
