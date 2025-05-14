@@ -5,6 +5,8 @@ from prompt_toolkit.formatted_text import to_formatted_text
 from prompt_toolkit.document import Document
 from prompt_toolkit.completion import WordCompleter
 
+from app import App
+
 from tqdm import tqdm 
 import requests
 import os
@@ -15,6 +17,8 @@ commands = {
     "view"      :   "class:view",
     "list"      :   "class:list",
     "ls"        :   "class:ls",
+    
+    "run"       :   "class:run",
     
     "end"       :   "class:end",
     "stop"      :   "class:stop",
@@ -31,6 +35,8 @@ style = Style.from_dict({
     
     "list"      :   "#00ff00 bold",
     "ls"        :   "#00ff00 bold",
+    
+    "run"          :   "#00ff00 bold",
     
     "end"       :   "#00ff00 bold",
     "stop"      :   "#00ff00 bold",  
@@ -81,12 +87,21 @@ class Main:
         if command_key == "view":
             self.view()
         
+        if command_key == "run":
+            self.run()
+        
         if command_key == "download":
             Download(self.tokened_command)
         
         if command_key == "cls" or command_key == "clear":
             self.clear()
-            
+    
+    
+    def run(self):
+        App()
+    
+    
+      
     def ls(self):
         
         ls_commands = ["commands", "problems"]
