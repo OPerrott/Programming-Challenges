@@ -1,7 +1,8 @@
 from settings import Settings
 from ui import UI
 
-from lib import *
+from tkinter import *   # For the application window
+from tkinter import ttk # For the application window
 
 class App:
     def __init__(self):

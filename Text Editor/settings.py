@@ -1,4 +1,5 @@
-from lib import *
+from tkinter import *   # For the application window
+from tkinter import ttk # For the application window
 
 class Settings:
     def __init__(self):
