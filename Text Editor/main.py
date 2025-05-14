@@ -8,7 +8,7 @@ class Main:
         self.bootup()
         
     def bootup(self):
-        UI.draw_window(self)
+        UI.draw_display(self)
         
         
 if __name__ == '__main__':
