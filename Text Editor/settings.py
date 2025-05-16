@@ -14,7 +14,6 @@ class Settings:
         
         self.load_settings()
         
-        
     def load_settings(self):
         try:
             with open('Text Editor/Data/data.txt', 'r') as file:
