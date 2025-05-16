@@ -16,11 +16,30 @@ class Settings:
         
         
     def load_settings(self):
-        with open('Data/data.txt', 'r') as file:
-            settings = [lines.strip() for lines in file]
-            
-        for setting in settings:
-            print(setting)
+        try:
+            with open('Text Editor/Data/data.txt', 'r') as file:
+                for line in file:
+                    line = line.strip()
+                    if not line:    # If the line is empty
+                        continue
+                    key, value = line.split(':')
+                    key = key.strip()
+                    value = value.strip()
+
+                    if key == 'DISPLAY_DIMENSIONS':
+                        width, height = value.split(',')
+                        self.SCREEN_WIDTH = int(width.strip())
+                        self.SCREEN_HEIGHT = int (height.strip())
+                    elif key == 'DISPLAY_POSITION':
+                        x, y = value.split(',')
+                        self.SCREEN_POSX = int(x.strip())
+                        self.SCREEN_POSY = int(y.strip())
+                    elif key == 'DISPLAY_COLOUR':
+                        self.SCREEN_COLOUR = value
+        except FileNotFoundError:
+            print(f"[ERROR] {self.data_file_path} not found!")
+        except ValueError:
+            print(f'[ERROR] Invalid Format in {self.data_file_path}')
             
     
     def display_size(display):
