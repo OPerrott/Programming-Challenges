@@ -156,7 +156,7 @@ class Main:
             print(f"Failed to retrieve file \"{command_value}\"")
             
     def clear(self):
-        os.system("cls")
+        os.system("cls" if os.name == "nt" else "clear")
        
 class Download:
     def __init__(self, tokened_command):
@@ -277,5 +277,5 @@ class Download:
             print(f"Failed download \"{file_name}\": {get_folder.status_code}")
                    
 if __name__ == '__main__':
-    os.system("cls")
+    os.system("cls" if os.name == "nt" else "clear")
     Main()
