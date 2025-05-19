@@ -17,10 +17,6 @@ class Solution:
         Enjoy Problem 1
         
         '''
-        
-        
-        
-        
         return s
     
     
