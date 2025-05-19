@@ -98,7 +98,27 @@ class Main:
     
     
     def run(self):
-        App()
+        program = input("Program << ")
+
+        if program == "music":
+            abs_path = os.path.abspath(r"Music App\app.py")
+
+        if program == "downloader":
+            abs_path = os.path.abspath(r"Text Editor\app.py")
+
+
+
+
+
+
+
+        if not os.path.exists(abs_path):
+            print(f"File not found: {abs_path}")
+            return
+
+        with open(abs_path, 'r') as file:
+            code = file.read()
+            exec(code, globals())  # Or use {} instead of globals() for isolation
     
     
       
