@@ -5,11 +5,11 @@ from prompt_toolkit.formatted_text import to_formatted_text
 from prompt_toolkit.document import Document
 from prompt_toolkit.completion import WordCompleter
 
-from app import App
-
 from tqdm import tqdm 
 import requests
 import os
+
+import json
 
 commands = {
     "download"  :   "class:download",
@@ -102,9 +102,6 @@ class Main:
 
         if program == "music":
             abs_path = os.path.abspath(r"Music App\app.py")
-
-        if program == "downloader":
-            abs_path = os.path.abspath(r"Text Editor\app.py")
 
 
 
