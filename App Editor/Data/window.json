@@ -6,7 +6,10 @@
             "WINDOW-POSX": 0,
             "WINDOW-POSY": 0,
             "WINDOW-COLOUR": "#FFFFFF",
-            "WINDOW-POS": [0, 0]
+            "WINDOW-POS": [
+                0,
+                0
+            ]
         }
     ]
 }

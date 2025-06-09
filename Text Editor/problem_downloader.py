@@ -45,6 +45,13 @@ style = Style.from_dict({
     "clear"     :   "#00ff00 bold",
 })
 
+
+
+
+
+
+
+
 completer = WordCompleter(commands, ignore_case=True)
 
 # Custom Lexer to color matching words
@@ -63,7 +70,7 @@ class CommandLexer(Lexer):
 
 class Main:
     def __init__(self):
-        self.running = True   
+        self.running = True
         
         self.loaded()
                
