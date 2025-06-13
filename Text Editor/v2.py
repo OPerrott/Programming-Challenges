@@ -1,3 +1,5 @@
+from settings import *
+
 import tkinter
 import os
 
@@ -7,58 +9,38 @@ class Main:
         self.run()
 
     def run(self):
+        Settings()
         App()
 
-class Settings:
-    def __init__(self):
-        self.resolution = "800x200"
-
-        self.settings = {}
-
-        self.read()
-    
-    def read(self):
-        with open(r'Text Editor\Data\data.txt', 'r') as s:
-            self.s = s.readlines()
-
-        self.load()
-    
-    def load(self):
-        for setting in self.s:
-            setting = setting.strip("\n").split()
-
-            print(setting)
-
-
-
-class App(Settings):
+class App(Settings_Vars):
     def __init__(self):
         super().__init__()
 
         self.init_window()
+        Graphics(self.window)
         
     
     def init_window(self):
         self.window = tkinter.Tk()
-        self.window.geometry(self.resolution)
-        self.window.configure(background='#2B2B2B')
+  
+        self.window.geometry(f"{Settings_Vars.WINDOW_WIDTH}x{Settings_Vars.WINDOW_HEIGHT}+{Settings_Vars.WINDOW_POSX}+{Settings_Vars.WINDOW_POSY}")
+        self.window.configure(background=f"{self.WINDOW_COLOUR}")
 
         self.window.mainloop()
+        print("Test")
 
-
-
-
-
-
-
+class Graphics:
+    def __init__(self, window):
+        self.window = window
+        
+        self.cmd_line()
+    
+    def cmd_line(self):
+        self.text = tkinter.Entry(self.window, background="#FFFFFF")
+        self.text.place(x=50, y=50)
 
 if __name__ == "__main__":
 
     os.system('cls')
 
-    CLASS = input("Which class do you want to test? ")
-
-    if CLASS.lower() == "main" or CLASS.lower() == None:
-        Main()
-    if CLASS.lower() == "settings":
-        Settings()
+    Main()
