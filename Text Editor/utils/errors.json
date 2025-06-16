@@ -1,0 +1,11 @@
+{
+    "NAMING_ERROR": {
+        "Error_Message": "\"{}\" is not a valid file path!",
+        "Error_Description": ""
+    },
+
+    "NONE_ERROR": {
+        "Error_Message": "No file path entered!",
+        "Error_Description": ""
+    }
+}

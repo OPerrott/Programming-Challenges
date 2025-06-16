@@ -1,0 +1,84 @@
+Date : 2025-06-15 03:06:45
+Directory : c:\Users\ollie\Programming-Challenges
+Total : 33 files,  1016 codes, 19 comments, 422 blanks, all 1457 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| Python             |         27 |        943 |         19 |        419 |      1,381 |
+| Markdown           |          2 |         32 |          0 |          0 |         32 |
+| JSON               |          3 |         25 |          0 |          2 |         27 |
+| JSON with Comments |          1 |         16 |          0 |          1 |         17 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                            | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                               |         33 |      1,016 |         19 |        422 |      1,457 |
+| . (Files)                                                                       |          1 |         57 |          0 |         16 |         73 |
+| App Editor                                                                      |          4 |         36 |          3 |         22 |         61 |
+| App Editor (Files)                                                              |          2 |         21 |          3 |         21 |         45 |
+| App Editor\Data                                                                 |          2 |         15 |          0 |          1 |         16 |
+| Message App                                                                     |          3 |          0 |          0 |          3 |          3 |
+| Music App                                                                       |          1 |         77 |          5 |         18 |        100 |
+| Paint App                                                                       |          1 |          6 |          0 |          4 |         10 |
+| Problem_Downloader                                                              |          1 |        202 |          5 |         91 |        298 |
+| Text Editor                                                                     |         16 |        501 |          6 |        191 |        698 |
+| Text Editor (Files)                                                             |          5 |        249 |          1 |         70 |        320 |
+| Text Editor\core                                                                |          3 |         38 |          2 |         24 |         64 |
+| Text Editor\data                                                                |          1 |         16 |          0 |          1 |         17 |
+| Text Editor\gui                                                                 |          3 |         82 |          1 |         39 |        122 |
+| Text Editor\utils                                                               |          4 |        116 |          2 |         57 |        175 |
+| problems                                                                        |          6 |        137 |          0 |         77 |        214 |
+| problems\problem_1                                                              |          2 |         59 |          0 |         36 |         95 |
+| problems\problem_1\code                                                         |          1 |         30 |          0 |         18 |         48 |
+| problems\problem_1\solution                                                     |          1 |         29 |          0 |         18 |         47 |
+| problems\problem_2                                                              |          2 |         78 |          0 |         39 |        117 |
+| problems\problem_2\code                                                         |          1 |         33 |          0 |         19 |         52 |
+| problems\problem_2\solution                                                     |          1 |         45 |          0 |         20 |         65 |
+| problems\problem_3                                                              |          2 |          0 |          0 |          2 |          2 |
+| problems\problem_3\code                                                         |          1 |          0 |          0 |          1 |          1 |
+| problems\problem_3\solution                                                     |          1 |          0 |          0 |          1 |          1 |
++---------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                                        | language           | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| c:\Users\ollie\Programming-Challenges\App Editor\Data\elements.json             | JSON               |          0 |          0 |          1 |          1 |
+| c:\Users\ollie\Programming-Challenges\App Editor\Data\window.json               | JSON               |         15 |          0 |          0 |         15 |
+| c:\Users\ollie\Programming-Challenges\App Editor\data.py                        | Python             |         21 |          3 |         20 |         44 |
+| c:\Users\ollie\Programming-Challenges\App Editor\main.py                        | Python             |          0 |          0 |          1 |          1 |
+| c:\Users\ollie\Programming-Challenges\Message App\app.py                        | Python             |          0 |          0 |          1 |          1 |
+| c:\Users\ollie\Programming-Challenges\Message App\client.py                     | Python             |          0 |          0 |          1 |          1 |
+| c:\Users\ollie\Programming-Challenges\Message App\server.py                     | Python             |          0 |          0 |          1 |          1 |
+| c:\Users\ollie\Programming-Challenges\Music App\app.py                          | Python             |         77 |          5 |         18 |        100 |
+| c:\Users\ollie\Programming-Challenges\Paint App\app.py                          | Python             |          6 |          0 |          4 |         10 |
+| c:\Users\ollie\Programming-Challenges\Problem_Downloader\problem_downloader.py  | Python             |        202 |          5 |         91 |        298 |
+| c:\Users\ollie\Programming-Challenges\Text Editor\PROJECT_TREE.md               | Markdown           |         29 |          0 |          0 |         29 |
+| c:\Users\ollie\Programming-Challenges\Text Editor\README.md                     | Markdown           |          3 |          0 |          0 |          3 |
+| c:\Users\ollie\Programming-Challenges\Text Editor\core\commands.py              | Python             |          5 |          0 |          4 |          9 |
+| c:\Users\ollie\Programming-Challenges\Text Editor\core\editor.py                | Python             |          5 |          0 |          4 |          9 |
+| c:\Users\ollie\Programming-Challenges\Text Editor\core\settings.py              | Python             |         28 |          2 |         16 |         46 |
+| c:\Users\ollie\Programming-Challenges\Text Editor\data\settings.json            | JSON with Comments |         16 |          0 |          1 |         17 |
+| c:\Users\ollie\Programming-Challenges\Text Editor\gui\colours.py                | Python             |         26 |          0 |          0 |         26 |
+| c:\Users\ollie\Programming-Challenges\Text Editor\gui\command_line.py           | Python             |          0 |          0 |          1 |          1 |
+| c:\Users\ollie\Programming-Challenges\Text Editor\gui\window.py                 | Python             |         56 |          1 |         38 |         95 |
+| c:\Users\ollie\Programming-Challenges\Text Editor\main.py                       | Python             |          6 |          0 |          2 |          8 |
+| c:\Users\ollie\Programming-Challenges\Text Editor\utils\colour_format.py        | Python             |         39 |          2 |         13 |         54 |
+| c:\Users\ollie\Programming-Challenges\Text Editor\utils\errors.json             | JSON               |         10 |          0 |          1 |         11 |
+| c:\Users\ollie\Programming-Challenges\Text Editor\utils\file_io.py              | Python             |         49 |          0 |         33 |         82 |
+| c:\Users\ollie\Programming-Challenges\Text Editor\utils\fpath_error_handling.py | Python             |         18 |          0 |         10 |         28 |
+| c:\Users\ollie\Programming-Challenges\Text Editor\v1.py                         | Python             |        157 |          0 |         29 |        186 |
+| c:\Users\ollie\Programming-Challenges\Text Editor\v2.py                         | Python             |         54 |          1 |         39 |         94 |
+| c:\Users\ollie\Programming-Challenges\main.py                                   | Python             |         57 |          0 |         16 |         73 |
+| c:\Users\ollie\Programming-Challenges\problems\problem_1\code\problem.py        | Python             |         30 |          0 |         18 |         48 |
+| c:\Users\ollie\Programming-Challenges\problems\problem_1\solution\solution.py   | Python             |         29 |          0 |         18 |         47 |
+| c:\Users\ollie\Programming-Challenges\problems\problem_2\code\problem.py        | Python             |         33 |          0 |         19 |         52 |
+| c:\Users\ollie\Programming-Challenges\problems\problem_2\solution\solution.py   | Python             |         45 |          0 |         20 |         65 |
+| c:\Users\ollie\Programming-Challenges\problems\problem_3\code\problem.py        | Python             |          0 |          0 |          1 |          1 |
+| c:\Users\ollie\Programming-Challenges\problems\problem_3\solution\solution.py   | Python             |          0 |          0 |          1 |          1 |
+| Total                                                                           |                    |      1,016 |         19 |        422 |      1,457 |
++---------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+

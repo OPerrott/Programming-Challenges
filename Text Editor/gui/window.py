@@ -1,13 +1,12 @@
-from settings import *
-
-from colours import *
-
+from core.settings import *
+from utils.colour_format import *
+from gui.colours import *
 
 import tkinter
 import os
 
 
-class Main:
+class Window:
     def __init__(self):
         self.run()
 
@@ -43,25 +42,27 @@ class Graphics:
     def calculate_offset(self):
         ...
     
+    
     def cmd_line(self):
+        self.window.update_idletasks()
+
         self.calculate_offset()
-        
         
         displayed: bool = True
         
-        width: int = self.window.winfo_width() - width_offset
-        height: int = self.window.winfo_height() - height_offset                                     # Default height=20
-        posx: str = 0                                        # Default posx=0
-        posy: str = Settings_Vars.WINDOW_HEIGHT-height
+        width: int = self.window.winfo_width()# - width_offset
+        height: int = 20 #self.window.winfo_height() - height_offset                                     # Default height=20
+        posx: int = 0                                      # Default posx=0
+        posy: int = self.window.winfo_height() - height
         
-        background: str = "#2B2B2B"
-        foreground: str = WHITE
+        background: str = Colour_Format("#2B2B2B")
+        foreground: str = Colour_Format(WHITE)
         
         border_width: int = 0
         
         submit_key: str = "<Return>"
         
-        clear_command: bool = False                            # Default clear_command=True
+        clear_command: bool = True                            # Default clear_command=True
 
         if displayed == True:
             
@@ -81,7 +82,7 @@ class Graphics:
             self.command.delete(0, tkinter.END) if clear_command else None
         ))
 
-
+    
 
 class Command_Line:
     def __init__(self, command):
@@ -91,4 +92,4 @@ if __name__ == "__main__":
 
     os.system('cls')
 
-    Main()
+    Window()
