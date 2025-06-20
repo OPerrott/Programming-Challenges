@@ -10,7 +10,7 @@ class File_Path_Error_Handling:
     def __init__(self, file_path=None, error_name=None):
         self.read_error_file()
         
-        print(RED_TEXT, self.errors[error_name]["Error_Message"].format(file_path), RESET_COLOUR_TEXT)
+        print(RED_TEXT, f"[ERROR] {self.errors[error_name]["Error_Message"].format(file_path)}", RESET_COLOUR_TEXT)
         # FINSH LOGIC FOR ERROR HANDLING
         
     def read_error_file(self):

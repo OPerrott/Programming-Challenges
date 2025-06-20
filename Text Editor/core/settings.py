@@ -1,3 +1,4 @@
+from utils.file_io import *
 import json
 import os
 
@@ -19,25 +20,16 @@ class Settings(Settings_Vars):
     def __init__(self):
         super().__init__()
         
-        self.settings = {}
-
-        self.read()
+        self.window_settings = File_IO(file_path=self.FILE)["window"][0]
+        self.ld_wnd()
     
-    def read(self):
-        with open(f"{self.FILE}", 'r') as s:
-            self.s = json.load(s)
-
-        self.load()
     
-    def load(self):
-        self.settings = self.s["window"][0]
-        
-        
-        for setting in self.settings:
+    def ld_wnd(self):
+        for setting in self.window_settings:
         
             curr_setting = setting.replace('-', '_')
             if hasattr(Settings_Vars, curr_setting):
-                setattr(Settings_Vars, curr_setting, self.settings[setting])
+                setattr(Settings_Vars, curr_setting, self.window_settings[setting])
 
         
 if __name__=='__main__':

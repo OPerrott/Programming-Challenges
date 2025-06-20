@@ -26,6 +26,9 @@ class App(Settings_Vars):
   
         self.window.geometry(f"{Settings_Vars.WINDOW_WIDTH}x{Settings_Vars.WINDOW_HEIGHT}+{Settings_Vars.WINDOW_POSX}+{Settings_Vars.WINDOW_POSY}")
         self.window.configure(background=f"{self.WINDOW_COLOUR}")
+        self.window.title("Text Editor")
+        self.window.iconbitmap("Text Editor\Resources\Assets\TextEditorIcon.png")
+
         
         
         Graphics(self.window)
@@ -51,8 +54,8 @@ class Graphics:
         displayed: bool = True
         
         width: int = self.window.winfo_width()# - width_offset
-        height: int = 20 #self.window.winfo_height() - height_offset                                     # Default height=20
-        posx: int = 0                                      # Default posx=0
+        height: int = 20 #self.window.winfo_height() - height_offset # Default height=20
+        posx: int = 0 # Default posx=0
         posy: int = self.window.winfo_height() - height
         
         background: str = Colour_Format("#2B2B2B")
@@ -62,7 +65,7 @@ class Graphics:
         
         submit_key: str = "<Return>"
         
-        clear_command: bool = True                            # Default clear_command=True
+        clear_command: bool = True # Default clear_command=True
 
         if displayed == True:
             
