@@ -1,0 +1,16 @@
+{
+    "Command_Line": [
+        {
+            "DISPLAYED": "True",
+            "WIDTH": "MAX",
+            "HEIGHT": 20,
+            "POSITION_X": 0,
+            "POSITION_Y": "MAX",
+            "BACKGROUND": "#2B2B2B",
+            "FOREGROUND": "WHITE",
+            "BORDER_WIDTH": 0,
+            "SUBMIT_KEY": "<Return>",
+            "CLEAR_ON_ENTER": "True"
+        }
+    ]
+}
