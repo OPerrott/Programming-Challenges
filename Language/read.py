@@ -14,7 +14,6 @@ class Read:
                 lex_line = Lex(line)
                 self.read_line(list(lex_line))
                 
-                print(Data.variables)
                 
     def read_line(self, lex_line):
         
@@ -41,7 +40,8 @@ class Read:
                     mul(lex_line)
                 case "div":
                     div(lex_line)
-                
+                case "run":
+                    run(lex_line)
             
         
         
