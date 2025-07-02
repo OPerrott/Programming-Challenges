@@ -1,4 +1,12 @@
 main
 {
+    run Image Loic
     run Image Filip
+    run Image Nathan
+    run Image Maja
+    run Image Mica
+    run Image Josh
+    run Image Oliver
+    run Image Joao
+    run Image Lucas
 }

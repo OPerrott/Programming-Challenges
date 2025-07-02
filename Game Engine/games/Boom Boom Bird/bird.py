@@ -8,7 +8,7 @@ class Bird:
         self.y = 300
         
         self.radius = 25
-        self.color = (128, 0, 128)
+        self.color = (255, 201, 14)
         
         self.vy = 0              # vertical velocity
         self.gravity = 1         # gravity acceleration

@@ -18,9 +18,9 @@ class Main:
         
         pygame.display.set_caption("Flappy Bird")
         
-        self.pipe = Pipe(self.window)
         self.bird = Bird(self.window)
-
+        self.pipe = Pipe(self.window)
+    
         self.clock = pygame.time.Clock()
 
         self.run()
@@ -30,11 +30,11 @@ class Main:
         running = True
     
         while running:
-            self.window.fill((30, 30, 30))  # clear screen with dark gray
+            self.window.fill((0, 162, 232))  # clear screen sky colour
             
-            self.pipe.update()
             self.bird.update()
-            
+            self.pipe.update()
+
             pygame.display.flip()
 
             for event in pygame.event.get():
