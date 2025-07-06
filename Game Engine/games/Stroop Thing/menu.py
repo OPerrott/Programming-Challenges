@@ -11,7 +11,8 @@ class Menu:
         self.run()
 
 
-
+    def update(self):
+        pygame.draw.rect(self.window, (255, 255, 255), (100, 100, 200, 200))
 
 
     def run(self):
@@ -20,13 +21,16 @@ class Menu:
         while running:
             self.window.fill((0, 162, 232))  # clear screen sky colour
 
+            self.update()
+
+
             pygame.display.flip()
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
                 if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
-                    self.bird.jump()
+                    ...
                     
             self.clock.tick(60)  # limit to 60 FPS
         

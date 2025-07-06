@@ -14,7 +14,27 @@ class Main:
         self.console_data = console_data
         self.window = self.console_data.window
 
+        self.clock = pygame.time.Clock()
+
+
+        self.run()
+
         Menu(self)
+        
+    def run(self):
+        running = True
+        while running:
+            self.window.fill((255, 3, 6))  # clear screen sky colour
+
+            pygame.display.flip()
+
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    running = False
+                    
+            self.clock.tick(60)  # limit to 60 FPS
+        
+        pygame.quit()
 
 if __name__ == "__main__":
     # Example of starting the game without console_data for testing
