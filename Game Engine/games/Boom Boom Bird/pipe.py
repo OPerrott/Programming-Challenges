@@ -8,12 +8,12 @@ class Pipe:
         self.window_width = surface.get_width()
         self.window_height = surface.get_height()
 
-        self.pipes = []  # list of pipe pairs (top and bottom rects)
+        self.pipes = []
 
         self.pipe_width = 75
-        self.pipe_gap = 250  # gap between top and bottom pipes
+        self.pipe_gap = 225
 
-        self.spawn_delay = 100  # frames to wait between spawning pipes
+        self.spawn_delay = 100
         self.spawn_timer = 0
         self.pipe_speed = 3
 
@@ -27,7 +27,8 @@ class Pipe:
 
             pipe_pair = {
                 "top": pygame.Rect(self.window_width, 0, self.pipe_width, top_height),
-                "bottom": pygame.Rect(self.window_width, bottom_y, self.pipe_width, bottom_height)
+                "bottom": pygame.Rect(self.window_width, bottom_y, self.pipe_width, bottom_height),
+                "scored": False
             }
             self.pipes.append(pipe_pair)
 
@@ -36,7 +37,6 @@ class Pipe:
             pipe_pair["top"].x -= self.pipe_speed
             pipe_pair["bottom"].x -= self.pipe_speed
 
-        # Remove pipes that have gone off-screen
         self.pipes = [p for p in self.pipes if p["top"].right > 0]
 
     def draw_pipes(self):
@@ -48,3 +48,17 @@ class Pipe:
         self.generate_pipe()
         self.move_pipes()
         self.draw_pipes()
+
+    def check_collision(self, bird_rect):
+        for pipe_pair in self.pipes:
+            if bird_rect.colliderect(pipe_pair["top"]) or bird_rect.colliderect(pipe_pair["bottom"]):
+                return True
+        return False
+
+    def check_score(self, bird_x):
+        score = 0
+        for pipe_pair in self.pipes:
+            if not pipe_pair["scored"] and pipe_pair["top"].right < bird_x:
+                pipe_pair["scored"] = True
+                score += 1
+        return score

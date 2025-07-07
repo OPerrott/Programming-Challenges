@@ -20,6 +20,10 @@ class Main:
         
         self.bird = Bird(self.window)
         self.pipe = Pipe(self.window)
+
+        self.score = 0
+        self.font = pygame.font.SysFont(None, 48)
+
     
         self.clock = pygame.time.Clock()
 
@@ -34,6 +38,19 @@ class Main:
             
             self.bird.update()
             self.pipe.update()
+
+            if self.pipe.check_collision(self.bird.get_rect()):
+                print("Collision detected!")
+                running = False
+
+            # Score update
+            self.score += self.pipe.check_score(self.bird.x)
+
+            # Draw score
+            score_text = self.font.render(f"Score: {self.score}", True, (0, 0, 0))
+            self.window.blit(score_text, (10, 10))
+
+
 
             pygame.display.flip()
 
